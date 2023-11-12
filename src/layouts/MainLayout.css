@@ -1,0 +1,18 @@
+.parallax {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.non-parallax-background {
+  position: relative;
+  /* display: none; */
+  background-color: #112233;
+  margin-top: 50%;
+  padding-bottom: 50%;
+}
