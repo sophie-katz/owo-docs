@@ -1,1 +1,3 @@
-export default interface Version {}
+export default interface Version {
+  name: string;
+}

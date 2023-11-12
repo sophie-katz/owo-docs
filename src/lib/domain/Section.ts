@@ -1,1 +1,3 @@
-export default interface Section {}
+export default interface Section {
+  name: string;
+}

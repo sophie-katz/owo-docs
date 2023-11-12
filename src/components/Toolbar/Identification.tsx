@@ -13,13 +13,13 @@ import { ToolbarProps } from "./props";
 export function Identification({
   title,
   versions,
-  currentVersionName,
-  onCurrentVersionNameChange,
+  currentVersionKey,
+  onCurrentVersionKeyChange,
 }: ToolbarProps): JSX.Element {
   const theme = useTheme();
 
-  function handleSelectVersionNameChange(event: SelectChangeEvent) {
-    onCurrentVersionNameChange(event.target.value);
+  function handleSelectVersionKeyChange(event: SelectChangeEvent) {
+    onCurrentVersionKeyChange(event.target.value);
   }
 
   return (
@@ -43,17 +43,17 @@ export function Identification({
       </Button>
       <FormControl id="toolbar-version" size="small">
         <Select
-          value={currentVersionName}
-          onChange={handleSelectVersionNameChange}
+          value={currentVersionKey}
+          onChange={handleSelectVersionKeyChange}
           variant="standard"
           size="small"
           sx={{
             color: theme.palette.primary.main,
           }}
         >
-          {Object.keys(versions).map((versionName) => (
-            <MenuItem key={versionName} value={versionName}>
-              {versionName}
+          {Object.entries(versions).map(([versionKey, version]) => (
+            <MenuItem key={versionKey} value={versionKey}>
+              {version.name}
             </MenuItem>
           ))}
         </Select>

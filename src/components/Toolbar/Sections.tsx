@@ -9,8 +9,8 @@ export interface ToolbarBottomProps extends ToolbarProps {
 
 export function Sections({
   sections,
-  currentSectionName,
-  onCurrentSectionNameChange,
+  currentSectionKey,
+  onCurrentSectionKeyChange,
   sectionsOpacity,
 }: ToolbarBottomProps): JSX.Element {
   const theme = useTheme();
@@ -29,19 +29,19 @@ export function Sections({
       }}
       spacing={SPACING_BETWEEN}
     >
-      {Object.keys(sections).map((sectionName) => (
+      {Object.entries(sections).map(([sectionKey, section]) => (
         <Button
-          key={sectionName}
+          key={sectionKey}
           sx={{
             color:
-              sectionName === currentSectionName
+              sectionKey === currentSectionKey
                 ? theme.palette.text.primary
                 : theme.palette.text.secondary,
             textTransform: "none",
           }}
-          onClick={() => onCurrentSectionNameChange(sectionName)}
+          onClick={() => onCurrentSectionKeyChange(sectionKey)}
         >
-          {sectionName}
+          {section.name}
         </Button>
       ))}
     </Stack>

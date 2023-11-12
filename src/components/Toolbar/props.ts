@@ -3,10 +3,10 @@ import Version from "../../lib/domain/Version";
 
 export interface ToolbarProps {
   title: string;
-  versions: { [name: string]: Version };
-  currentVersionName: string;
-  onCurrentVersionNameChange: (version: string) => void;
-  sections: { [name: string]: Section };
-  currentSectionName: string;
-  onCurrentSectionNameChange: (sectionName: string) => void;
+  versions: { [key: string]: Version };
+  currentVersionKey: string;
+  onCurrentVersionKeyChange: (version: string) => void;
+  sections: { [key: string]: Section };
+  currentSectionKey: string;
+  onCurrentSectionKeyChange: (sectionName: string) => void;
 }
