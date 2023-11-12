@@ -7,6 +7,9 @@ export default createTheme({
     primary: {
       main: blue[400],
     },
+    background: {
+      default: "#001122",
+    },
   },
   typography: {
     fontFamily: ["Poppins", "sans-serif"].join(","),
@@ -18,4 +21,5 @@ export default createTheme({
       },
     },
   },
+  spacing: (factor: number) => `${0.5 * factor}rem`,
 });
