@@ -1,0 +1,18 @@
+name: Simple Example
+description: This is a simple example of an owo-docs.yml file.
+
+defaultVersion: 0.1.0
+
+versions:
+  - key: 0.1.0
+    sections:
+      - name: Getting started
+      - name: Writing documentation
+      - name: Customization
+      - name: API Reference
+  - key: 0.1.1
+    name: 0.1.1 (pre)
+    sections:
+      - name: Getting started
+      - name: Writing documentation
+      - name: Customization

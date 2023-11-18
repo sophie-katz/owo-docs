@@ -1,0 +1,20 @@
+{
+  "name": "owo-docs",
+  "version": "0.1.0",
+  "description": "Documentation generator owo :3",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "yaml": "^2.3.4",
+    "zod": "^3.22.4"
+  }
+}
